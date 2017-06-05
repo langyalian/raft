@@ -13,11 +13,13 @@ raft 主要实现目标是在集群中选出一个领导者
 
 接口使用说明：
 	raft模块提供了4个接口：
+	```
 
 		1 start_working/0
  		2 add_handler/2
  		3 delete_handler/1
-        4 role/0 
+        	4 role/0 
+	```
 
 下面对每个接口进行描述：
 	1 start_working/0
@@ -42,11 +44,17 @@ raft 主要实现目标是在集群中选出一个领导者
 
 编译命令：    $ ./rebar3 compile
 
-测试方法：    $ bin/start-master-node 节点名称
-			bin/start-slave-node  节点名称  主节点名称
+测试方法：    
+
+	bin/start-master-node 节点名称
+	
+	bin/start-slave-node  节点名称  主节点名称
 
 
 
-例子： bin/start-master-node     node1
-       bin/start-slave-node	node2    	node1
-       bin/start-slave-node	node3    	node1
+例子： 
+	bin/start-master-node     node1
+	
+        bin/start-slave-node	node2    	node1
+	
+       	bin/start-slave-node	node3    	node1
