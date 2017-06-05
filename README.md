@@ -1,11 +1,13 @@
 raft 主要实现目标是在集群中选出一个领导者
 
 系统一共有三个角色 :	
+
 			1 追随者（follower）
 			2 候选人（candidate）
 			3 领导者 （leader）
 
 角色转换：
+
 		1 追随者可以转换为候选人
 		2 候选人可以转换为追随者和领导人
 		3 领导人可以转换为追随者
@@ -22,6 +24,7 @@ raft 主要实现目标是在集群中选出一个领导者
 	```
 
 下面对每个接口进行描述：
+
 	1 start_working/0
 	在使用raft应用时必须调用一次 start_working/0，否则不会进行正常工作。
 
@@ -42,7 +45,9 @@ raft 主要实现目标是在集群中选出一个领导者
 
 测试用例：
 
-编译命令：    $ ./rebar3 compile
+编译命令：   
+	
+	$ ./rebar3 compile
 
 测试方法：    
 
@@ -52,7 +57,8 @@ raft 主要实现目标是在集群中选出一个领导者
 
 
 
-例子： 
+例子：
+
 	bin/start-master-node     node1
 	
         bin/start-slave-node	node2    	node1
